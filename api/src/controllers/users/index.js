@@ -7,8 +7,12 @@ module.exports = {
       query
     } = req;
 
-    const user = _.pick(body, ['name', 'password', 'email', 'phone']);
-    const address = _.pick(body, ['zipCode', 'street', 'number', 'neighbour', 'complement']);
+    const user = _.pick(
+      body, 
+      ['name', 'password', 'email', 'phone']);
+    const address = _.pick(
+      body, 
+      ['zipCode', 'street', 'number', 'neighbour', 'complement', 'city', 'state']);
 
     return res.status(201).json({
       user,
