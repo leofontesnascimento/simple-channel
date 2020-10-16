@@ -1,4 +1,8 @@
 const _ = require('lodash');
+const { 
+  users,
+  addresses
+} = require('../../models');
 
 module.exports = {
   async post(req, res, next) {
@@ -8,15 +12,23 @@ module.exports = {
     } = req;
 
     const user = _.pick(
-      body, 
+      body,
       ['name', 'password', 'email', 'phone']);
+
+    const createdUser = await users.create(user);
+
     const address = _.pick(
-      body, 
-      ['zipCode', 'street', 'number', 'neighbour', 'complement', 'city', 'state']);
+      body,
+          ['zipCode', 'street', 'number', 'neighbour', 'complement', 'city', 'state']);
+
+    const createdAddress = await addresses.create({
+      ...address,
+      userId: createdUser.id
+    });
 
     return res.status(201).json({
-      user,
-      address
+      user: createdUser,
+      address: createdAddress
     });
   }
 }
