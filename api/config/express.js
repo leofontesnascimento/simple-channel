@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const config = require('config');
+const {
+  healthRoute
+} = require('../src/routes');
 
 module.exports = () => {
   const app = express();
@@ -10,6 +13,9 @@ module.exports = () => {
 
   // Setting middlewares
   app.use(bodyParser.json());
+
+  // Setting routes
+  app.use('/health', healthRoute);
 
   return app;
 };
