@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "77deff15-ec8e-4381-b8f5-611ece9445c8",
+		"name": "simple-channel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "success",
+					"item": [
+						{
+							"name": "healthcheck",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{env}}/health",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "users",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"API Test User\",\n\t\"password\": \"123\",\n\t\"email\": \"test@test.com\",\n\t\"phone\": \"92999999999\",\n\t\"zipCode\": \"69057002\",\n\t\"street\": \"Random Street\",\n\t\"number\": 10,\n\t\"neighbour\": \"Random Neighbour\",\n\t\"complement\": \"Near of my house\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{env}}/users",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
