@@ -25,7 +25,13 @@ db-migrate:
 db-migrate-reset:
 	docker-compose exec api npx sequelize-cli db:migrate:undo:all
 
+# --name user --attributes firstName:string,lastName:string,email:string
+db-create-model:
+	npx sequelize-cli model:generate --name $(NAME) --attributes $(ATTRIBUTES)
+
 bash-postgres:
 	docker-compose exec postgres psql simple_channel simple_channel
+
+
 
 
