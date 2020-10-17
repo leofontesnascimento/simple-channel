@@ -3,6 +3,7 @@ const {
   BASEURL,
   BASEFORMAT
 } = require('./constants');
+const { InvalidCep } = require('./errors');
 
 module.exports = {
   async validate(number) {
@@ -15,7 +16,8 @@ module.exports = {
           data = res.data;
         })
         .catch( error => {
-          throw error;
+          console.trace(error);
+          throw new InvalidCep();
         });
         return data;
     } catch (error) {
