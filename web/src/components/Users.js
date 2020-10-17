@@ -41,11 +41,26 @@ function Users() {
       state
     }
     console.log('user: ', user);
-    try {
-      const res = await UsersProxy.post(user);
-    } catch (error) {
+    await UsersProxy.post(user)
+    .then(res => {
+      alert('Cadastro concluído com sucesso!');
+      setName('');
+      setPassword('');
+      setEmail('');
+      setPhone('');
+      setDocumentId('');
+      setZipCode('');
+      setStreet('');
+      setNumber('');
+      setNeighbour('');
+      setComplement('');
+      setCity('');
+      setState('');
+    })
+    .catch(error => {
       console.trace(error);
-    }
+      alert(error.response.data.message);
+    });
   }
 
   const validateZipCode = async (zipCode) => {

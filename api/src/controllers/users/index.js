@@ -4,6 +4,7 @@ const {
   addresses
 } = require('../../models');
 const { errorHandler } = require('../../../middlewares/handlererror');
+const viacep = require('../../../services/viacep');
 
 module.exports = {
   async post(req, res, next) {
@@ -13,6 +14,9 @@ module.exports = {
     } = req;
 
     try {
+      const zipCode = _.pick(body, ['zipCode']);
+      await viacep.validate(zipCode.zipCode);
+
       const user = _.pick(
         body,
         ['name', 'password', 'email', 'phone', 'documentId']);
