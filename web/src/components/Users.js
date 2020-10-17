@@ -107,7 +107,7 @@ function Users() {
               <input
                 id={'name'}
                 name={'name'}
-                placeholder="Nome"
+                placeholder="Nome *"
                 value={name}
                 className='Users-input'
                 onChange={e => setName(e.target.value)}
@@ -118,7 +118,7 @@ function Users() {
               <input
                 id={'password'}
                 name={'password'}
-                placeholder="Password"
+                placeholder="Password *"
                 value={password}
                 className='Users-input'
                 onChange={e => setPassword(e.target.value)}
@@ -140,7 +140,7 @@ function Users() {
               <input
                 id={'phone'}
                 name={'phone'}
-                placeholder="Telefone"
+                placeholder="Telefone *"
                 value={phone}
                 className='Users-input'
                 onChange={e => setPhone(e.target.value)}
@@ -151,7 +151,7 @@ function Users() {
               <input
                 id={'documentid'}
                 name={'documentid'}
-                placeholder="CPF"
+                placeholder="CPF *"
                 value={documentId}
                 className='Users-input'
                 onChange={e => setDocumentId(e.target.value)}
@@ -167,7 +167,7 @@ function Users() {
             <input
               id={'zipcode'}
               name={'zipcode'}
-              placeholder="CEP"
+              placeholder="CEP *"
               value={zipCode}
               className='Users-input'
               onChange={e => setZipCode(e.target.value)}
@@ -179,7 +179,7 @@ function Users() {
             <input
               id={'street'}
               name={'street'}
-              placeholder="Rua"
+              placeholder="Rua *"
               value={street}
               className='Users-input'
               onChange={e => setStreet(e.target.value)}
@@ -201,7 +201,7 @@ function Users() {
             <input
               id={'neighbour'}
               name={'neighbour'}
-              placeholder="Bairro"
+              placeholder="Bairro *"
               value={neighbour}
               className='Users-input'
               onChange={e => setNeighbour(e.target.value)}
@@ -223,7 +223,7 @@ function Users() {
             <input
               id={'city'}
               name={'city'}
-              placeholder="Cidade"
+              placeholder="Cidade *"
               value={city}
               className='Users-input'
               onChange={e => setCity(e.target.value)}
@@ -234,7 +234,7 @@ function Users() {
             <input
               id={'state'}
               name={'state'}
-              placeholder="Estado"
+              placeholder="Estado *"
               value={state}
               className='Users-input'
               onChange={e => setState(e.target.value)}
