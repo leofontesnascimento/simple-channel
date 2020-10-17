@@ -10,7 +10,7 @@ const documentIdError = {
 
 const cepError = {
   code: 702,
-  message: 'CEP inválido!',
+  message: 'CEP inválido! Por favor, verifique se o campo foi preenchido corretamente.',
 }
 
 module.exports = {

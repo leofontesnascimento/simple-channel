@@ -7,6 +7,7 @@ import {
 import './Users.css';
 
 import UsersProxy from '../api/users';
+import CepProxy from '../api/cep';
 
 // import { Container } from './styles';
 
@@ -47,6 +48,31 @@ function Users() {
     }
   }
 
+  const validateZipCode = async (zipCode) => {
+    await CepProxy.get(zipCode)
+    .then(res => {
+      const { 
+        logradouro,
+        bairro,
+        complemento,
+        localidade,
+        uf,
+      } = res.data.data;
+      setStreet(logradouro);
+      setNeighbour(bairro);
+      setComplement(complemento);
+      setCity(localidade);
+      setState(uf);
+    })
+    .catch(error => {
+      alert(error.response.data.message);
+      setStreet('');
+      setNeighbour('');
+      setComplement('');
+      setCity('');
+      setState('');
+    });
+  }
 
   return (
     <Fragment>
@@ -130,6 +156,7 @@ function Users() {
               value={zipCode}
               className='Users-input'
               onChange={e => setZipCode(e.target.value)}
+              onBlur={e => validateZipCode(e.target.value)}
               required={true}
             />
           </Row>
@@ -210,7 +237,6 @@ function Users() {
           </Row>
       </Container>
       </div>
-      
     </Fragment>
   );
 }
