@@ -80,6 +80,36 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "fail",
+					"item": [
+						{
+							"name": "cep",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{env}}/cep?number=010010001",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"cep"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "010010001"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				}
 			],
 			"protocolProfileBehavior": {}
