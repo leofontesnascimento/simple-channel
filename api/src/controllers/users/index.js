@@ -11,24 +11,31 @@ module.exports = {
       query
     } = req;
 
-    const user = _.pick(
-      body,
-      ['name', 'password', 'email', 'phone', 'documentId']);
+    try {
+      const user = _.pick(
+        body,
+        ['name', 'password', 'email', 'phone', 'documentId']);
 
-    const createdUser = await users.create(user);
+      const createdUser = await users.create(user);
 
-    const address = _.pick(
-      body,
-          ['zipCode', 'street', 'number', 'neighbour', 'complement', 'city', 'state']);
+      const address = _.pick(
+        body,
+            ['zipCode', 'street', 'number', 'neighbour', 'complement', 'city', 'state']);
 
-    const createdAddress = await addresses.create({
-      ...address,
-      userId: createdUser.id
-    });
+      const createdAddress = await addresses.create({
+        ...address,
+        userId: createdUser.id
+      });
 
-    return res.status(201).json({
-      user: createdUser,
-      address: createdAddress
-    });
+      return res.status(201).json({
+        user: createdUser,
+        address: createdAddress
+      });
+
+    } catch (error) {
+      console.trace(error);
+      return res.status(500).send(`Something went wrong! Error: ${error}`);
+    }
+
   }
 }
