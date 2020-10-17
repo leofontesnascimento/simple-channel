@@ -28,7 +28,7 @@ module.exports = {
       },
       number: {
         allowNull: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       neighbour: {
         allowNull: false,
