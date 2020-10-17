@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const config = require('config');
 const {
+  cepRoute,
   healthRoute,
   usersRoute
 } = require('../src/routes');
@@ -16,6 +17,7 @@ module.exports = () => {
   app.use(bodyParser.json());
 
   // Setting routes
+  app.use('/cep', cepRoute);
   app.use('/health', healthRoute);
   app.use('/users', usersRoute);
 
