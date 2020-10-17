@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const bodyParser = require('body-parser');
 const config = require('config');
 const {
@@ -9,6 +10,9 @@ const {
 
 module.exports = () => {
   const app = express();
+
+  // Enabling cors requests
+  app.use(cors())
 
   // Setting env vars
   app.set('port', process.env.NODE_PORT || config.get('server.port'));
