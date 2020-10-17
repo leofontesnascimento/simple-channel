@@ -6,12 +6,15 @@ import {
 } from 'react-bootstrap';
 import './Users.css';
 
+import UsersProxy from '../api/users';
+
 // import { Container } from './styles';
 
 function Users() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [documentId, setDocumentId] = useState('');
   const [zipCode, setZipCode] = useState('');
   const [street, setStreet] = useState('');
@@ -26,6 +29,7 @@ function Users() {
       name,
       password,
       email,
+      phone,
       documentId,
       zipCode,
       street,
@@ -36,6 +40,11 @@ function Users() {
       state
     }
     console.log('user: ', user);
+    try {
+      const res = await UsersProxy.post(user);
+    } catch (error) {
+      console.trace(error);
+    }
   }
 
 
@@ -83,6 +92,17 @@ function Users() {
                 value={email}
                 className='Users-input'
                 onChange={e => setEmail(e.target.value)}
+                required={true}
+              />
+          </Row>
+          <Row>
+              <input
+                id={'phone'}
+                name={'phone'}
+                placeholder="Telefone"
+                value={phone}
+                className='Users-input'
+                onChange={e => setPhone(e.target.value)}
                 required={true}
               />
           </Row>
