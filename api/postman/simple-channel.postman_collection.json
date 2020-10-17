@@ -53,6 +53,29 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "cep",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{env}}/cep?number=01001000",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"cep"
+									],
+									"query": [
+										{
+											"key": "number",
+											"value": "01001000"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},
