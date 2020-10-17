@@ -35,7 +35,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"name\": \"API Test User\",\n\t\"password\": \"123\",\n\t\"email\": \"test@test.com\",\n\t\"phone\": \"92999999999\",\n\t\"zipCode\": \"69057002\",\n\t\"street\": \"Random Street\",\n\t\"number\": 10,\n\t\"neighbour\": \"Random Neighbour\",\n\t\"complement\": \"Near of my house\",\n    \"city\": \"Random City\",\n    \"state\": \"Random State\"\n}",
+									"raw": "{\n\t\"name\": \"API Test User\",\n\t\"password\": \"123\",\n\t\"email\": \"test@test.com\",\n\t\"phone\": \"92999999999\",\n    \"documentId\": \"99999999999\",\n\t\"zipCode\": \"69057002\",\n\t\"street\": \"Random Street\",\n\t\"number\": 10,\n\t\"neighbour\": \"Random Neighbour\",\n\t\"complement\": \"Near of my house\",\n    \"city\": \"Random City\",\n    \"state\": \"Random State\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

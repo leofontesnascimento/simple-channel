@@ -13,7 +13,7 @@ module.exports = {
 
     const user = _.pick(
       body,
-      ['name', 'password', 'email', 'phone']);
+      ['name', 'password', 'email', 'phone', 'documentId']);
 
     const createdUser = await users.create(user);
 

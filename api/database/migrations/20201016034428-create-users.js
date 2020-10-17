@@ -25,6 +25,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      documentId: {
+        field: 'document_id',
+        allowNull: false,
+        type: Sequelize.STRING,
+        unique: true,
+      },
       createdAt: {
         field: 'created_at',
         allowNull: false,
