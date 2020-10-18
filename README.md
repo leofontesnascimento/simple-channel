@@ -16,3 +16,9 @@ Como descrito anteriormente este projeto transita do `Backend` até o `Frontend`
 * [Configurando a API](docs/setting-backend.md)
 * [Configurando o Site](docs/setting-frontend.md)
 
+## Respondendo Alumas Perguntas
+
+Aqui estão respondidas algumas perguntas importantes sobre o projeto:
+
+* [Questions.txt](Questions.txt) - Arquivo com as principais perguntas e respostas sobre o projeto.
+

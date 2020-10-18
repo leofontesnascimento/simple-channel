@@ -1,0 +1,43 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+
+A ideia principal dessa solução é um dia ser Omnichannel. Portanto, na minha visão
+se um dia ela for diponibilizada em produção deverá ser em algum serviço de Cloud,
+uma vez que somente assim será possível disponibilizarmos uma feature em diferentes
+canais com a possibilidade de continuidade de experiência do usuário.
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa
+solução, responda qual ferramenta acreditas ser apropriada para o controle de
+tarefas da equipe, a ferramenta é ágil?
+
+Como se trata de um time muito pequeno na minha visão podemos usar duas ferramentas simples:
+
+- Trello
+- Jira
+
+As duas são ferramentas que seguem o princípio de Agile. Contudo, no Trello o
+controle das tasks e das sprints seria extremamente manual, o próprio board é muito simples
+e não dá para calcular direito índices de métricas como no Burndown e o Cumulative Flow Diagram,
+que ajudam muito a entender o desempenho, velocidade do time, e problemas na sprint. Já o Jira 
+te entrega isso tudo de forma automática! Só necessita de uma pequena curva de aprendizado. 
+E o melhor de tudo é que o Jira é muito barato para um número pequeno de usuário, o que seria 
+o caso do time do pergunta. 
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+
+Sim, me sinto confortável em posições de liderança técnica. Acredito que seja porque
+já tenho cerca de 5 anos atuando dessa forma e tenho tido a oportunidade de trabalhar em projetos
+simples e complexos como esse de forma mais hands-on, conheço muito bem a stack utilizada,
+além de já ter liderado pessoas de diferentes tipos de personalidade e senioridade. Contudo, 
+obviamente sempre aparece algo novo, então estou em constante  aprendizado, essa posição sempre 
+está me desafiando a me tornar um profissional cada vez mais preparado, afinal a responsabilidade 
+de direcionar um time é muito grande.
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+
+Acho que a descrição do problema confunde um pouco pois leva a entender que a solução em si
+deveria ser muito mais complexa do que realmente necessitava.
+
+5. Acha válido esse desafio para o processo que está participando?
+
+Sim. Ela pode demonstrar bastante do conhecimento que um Engenheiro de Software possui e como pode contribuir
+em uma stack completa de software, enfim, é uma atividade que dá um fit interessante com o noss dia-a-dia. 
