@@ -3,6 +3,9 @@ DB_URL=postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_DATABAS
 build:
 	docker-compose build
 
+build-no-cache:
+	docker-compose build --no-cache 
+
 start:
 	docker-compose up -d
 
